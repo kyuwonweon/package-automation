@@ -2,7 +2,7 @@ from machine import Pin, I2C
 import time
 
 # I2C + PCA9685 SETUP
-i2c = I2C(0, scl=Pin(7), sda=Pin(6), freq=400000)
+i2c = I2C(1, scl=Pin(7), sda=Pin(6), freq=400000)
 
 PCA_ADDR  = 0x40
 MODE1     = 0x00
@@ -45,7 +45,7 @@ def slow_move(channel, start_angle, end_angle, steps, delay_ms):
 
 # PARAMETERS — change via serial monitor
 params = {
-    "channel"      : 0,
+    "channel"      : 12,
     "home"         : 0,
     "square_angle" : 92,
     "sweep_steps"  : 30,
